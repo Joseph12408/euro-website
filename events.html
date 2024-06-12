@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Five-Star Hotel Germany</title>
+        <link rel="stylesheet" type="text/css" href="events.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Hurricane&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bentham&family=Dancing+Script:wght@400..700&family=Hurricane&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="logo"><a href="euro home page.html">KRYSTAL HOTEL</a></div>
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="rooms.html">ROOMS</a></li>
+                        <li><a href="offers.html">OFFERS</a></li>
+                        <li><a href="wineshop.html">VINOTHEK</a></li>
+                        <li><a href="events.html" class="home-active">CONFERENCE & CELEBRATION</a></li>
+                        <li><a href="galery.html">GALLERY</a></li>
+                        <li><a href="map.html">LOCATION & DIRECTIONS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="mini-container">
+            <h1>MEETINGS AND EVENTS</h1>
+            <p>Whether it's a small meeting or a big workshop, product presentation or a conference 
+            – with us you will find the perfect surroundings for your event. Five conference rooms at the 
+            Excelsior by Geisel provide space for up to 100 people. The right equipment for your presentation 
+            technology and wireless internet access are always included</p>
+        </div>
+
+        <div class="container">
+            <div class="slider">
+                <div class="slides">
+                    <img src="hotel pics/event1.jpg" class="slide" alt="image #1">
+                    <img src="hotel pics/event3.jpg" class="slide" alt="image #2">
+                    <img src="hotel pics/event4.jpg" class="slide" alt="image #3">
+                </div>
+                <button class="prev" onclick="prevSlide()">&#10094</button>
+                <button class="next" onclick="nextSlide()">&#10095</button>
+            </div>
+        </div>
+        <script>
+            const slides = document.querySelectorAll(".slides img");
+            let slideIndex = 0;
+            let intervalId = null;
+
+            //initializeSlider();
+            document.addEventListener("DOMContentLoaded", initializeSlider);
+
+            function initializeSlider(){
+
+                if(slides.length > 0){
+                    slides[slideIndex].classList.add("displaySlide");
+                    intervalId = setInterval(nextSlide, 5000);
+                }
+
+            }
+            function showSlide(index){
+                if(index >= slides.length){
+                    slideIndex = 0;
+                }
+                else if(index < 0){
+                    slideIndex = slides.length - 1;
+                }
+                slides.forEach(slide => {
+                    slide.classList.remove("displaySlide");
+                });
+                slides[slideIndex].classList.add("displaySlide");
+            }
+            function prevSlide(){
+                clearInterval(intervalId);
+                slideIndex--;
+                showSlide(slideIndex);
+            }
+            function nextSlide(){
+                slideIndex++;
+                showSlide(slideIndex);
+            }
+        </script>
+
+        <section class="features">
+            <div class="feature">
+                <img src="hotel pics/restaurant1.jpg">
+                <h2>luxury Rooms</h2>
+                <p>Indulge in our spacious and elegantly designed rooms.</p>
+            </div>
+            <div class="feature">
+                <img src="hotel pics/restaurant 2.jpg">
+                <h2>Gourmet Dining</h2>
+                <p>Savor culinary delights crafted by our renowned chefs.</p>
+            </div>
+            <div class="feature">
+                <img src="hotel pics/restaurant 3.jpg">
+                <h2>Recreational Facilities</h2>
+                <p>Relax and unwind in our state-of-the-art swimming pool and spa.</p>
+            </div>
+        </section>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <ul>
+                            <li>About us</li>
+                            <li>Privacy Policy</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-2">
+                        <ul>
+                        <li>contact us</li>
+                        <li>+49 (0) 89 551 37-0</li>
+                        <li>krystalhotel@yahoo.com</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-3">
+                        <h1>KRYSTAL HOTEL</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        <script>
+            const toTop = document.querySelector(".to-top");
+
+            window.addEventListener("scroll", () => {
+                if (window.pageYOffset > 100){
+                    toTop.classList.add("active");
+                }
+                else {
+                    toTop.classList.remove("active");
+                }
+            })
+        </script>
+        <script src="https://kit.fontawesome.com/edc114d5c3.js" crossorigin="anonymous"></script>
+    </body>
+</html>

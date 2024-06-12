@@ -1,0 +1,403 @@
+body, h1, h2, p, ul,  li{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 21px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: tan;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-bottom: 50px;
+    padding: 30px;
+     z-index: 100000;
+}
+.logo{
+    font-family: "Dancing Script", cursive;
+    font-size: 50px;
+    padding-right: 30px;
+    text-align: center;
+}
+.navbar{
+	display: flex;
+	align-items: center;
+}
+.logo{
+	align-items: right;
+	text-decoration: none;
+}
+nav{
+	flex: 1;
+	text-align: center;
+    padding-right: 80px;
+}
+nav ul{
+	display: inline-block;
+	list-style-type: none;
+}
+nav ul li{
+	display: inline-block;
+	padding: 20px 0;
+	margin-right: 20px;
+}
+a{
+	text-decoration: none;
+    color: tan;
+}
+.navbar a:hover,
+.navbar .home-active{
+	background: #fff;
+	border-radius: 0;
+	color: #010006;
+	transition: background 1s;
+}
+.hero{
+    background: url('hotel\ pics/hall\ way\ 2.jpg') no-repeat center/cover;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+.hero-content{
+    text-align: center;
+}
+.hero-content h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: white;
+}
+.hero-content p{
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: white;
+}
+.primary-btn a{
+    text-decoration: none;
+    color: white;
+    background: tan;
+}
+a .primary-btn{
+    text-decoration: none;
+    color: white;
+    background: tan;
+}
+.primary-btn{
+    padding: 15px 40px;
+    border-color: tan;
+    background: tan;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.secondary-btn{
+    padding: 15px 40px;
+    background: none;
+    border: 2px solid white;
+    font-weight: bold;
+    color: #fff;
+}
+.mini-container{
+    width: 600px;
+    margin: 80px 300px;
+    text-align: center;
+}
+.mini-container h1{
+    color: tan;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.mini-container p{
+    justify-content: space-between;
+    line-height: 30px;
+}
+.container-top{
+    font-size: +4;
+}
+.container-top h1, h2{
+    text-align: center;
+    color: tan;
+}
+.container-top p{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.features{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background: #fff;
+}
+.feature{
+    text-align: center;
+}
+.feature img{
+	height: 350px;
+    width: 300px;
+	padding: 40px 20px;
+}
+.feature i{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.feature h2{
+    margin-bottom: 10px;
+}
+.rooms{
+    position: relative;
+}
+.rooms .text{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: none;
+    padding: 30px;
+}
+.rooms i{
+    font-size: 12px;
+    color: #fbb234;
+    margin: 15px 0;
+    margin-right: 5px;
+}
+.rooms p{
+    margin: 20px 0;
+    opacity: 0.7;
+}
+.rooms h3{
+    font-size: 30px;
+    line-height: 20px;
+    margin-left: 20px;
+    font-weight: 500;
+    color: tan;
+}
+.rooms h3 span{
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+}
+.owl-nav .owl-prev,
+.owl-nav .owl-next{
+    position: absolute;
+    top: -20%;
+    height: 50px;
+    width: 50px;
+    background: tan !important;
+    color: #fff;
+}
+.owl-nav .owl-prev i,
+.owl-nav .owl-next i{
+    color: #fff;
+}
+.owl-nav .owl-prev{
+    left: 90%;
+}
+.owl-nav .owl-next{
+    right: 0px;
+}
+.gallery{
+    position: relative;
+}
+.gallery img{
+    width: 100%;
+    height: 50vh;
+}
+.gallery .img{
+    position: relative;
+}
+.gallery .img::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(126, 193, 65, 0.86);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition: 0.5s;
+}
+.overplay{
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    z-index: 3;
+    text-align: center;
+    color: white;
+   /*opacity: 0;*/
+    transition: 0.5s;
+}
+.gallery span{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    border: 2px solid white;
+}
+.overlay h3{
+    margin-top: 20px;
+    font-weight: 500;
+}
+.gallery .items:hover .overlay,
+.gallery .items:hover .img::after{
+    opacity: 1;
+    cursor: pointer;
+}
+.gallery .owl-nav .owl-prev{
+    left: 85%;
+}
+.gallery .owl-nav .owl-next{
+    right: 5%;
+}
+.gallery .owl-nav .owl-next,
+.gallery .owl-nav .owl-prev{
+    top: -40%;
+}
+.special-offer{
+    text-align: center;
+}
+.special-offer .text h1{
+    color: tan;
+    text-align: center;
+}
+.special-offer .text p{
+    margin: 20px 200px;
+}
+.special-offer .primary-btn{
+    align-items: center;
+}
+.special-offer .img{
+    position: relative;
+    display: flex;
+    height: 900px;
+    margin-top: 20px;
+    width: 650px;
+    padding: 50px 0;
+}
+.slider{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding: 50px 0;
+    overflow: hidden;
+}
+.slider img{
+    width: 100%;
+    display: none;
+}
+img.displaySlide{
+    display: block;
+}
+.slider button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+.conference{
+    text-align: center;
+}
+.conference .text h1{
+    color: tan;
+    text-align: center;
+}
+.conference .text p{
+    text-align: left;
+    margin: 20px 200px;
+}
+.conference .primary-btn{
+    align-items: center;
+}.conference .row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
+    width: 800px;
+}
+.conference .col-3{
+    margin-right: 50px;
+}
+.conference .img img{
+    height: 400px;
+    width: 300px;
+    padding: 40px 20px;
+}
+
+.footer{
+    background: tan;
+    color: #fff;
+    padding: 80px 0;
+}
+.footer .row{
+    margin-top: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3{
+    margin: auto;
+    display: inline-block;
+    position: relative;
+	min-width: 250px;
+	margin-bottom: 20px;
+    padding-left: 50px;
+}
+.footer ul{
+    list-style-type: none;
+}
+.footer ul li{
+    margin-bottom: 10px;
+}
+.footer-col-1{
+	flex-basis: 30%;
+	text-align: left;
+    margin-left: 20px;
+	padding-right: 50px;
+}
+.footer-col-2{
+	flex: 1;
+	text-align: left;
+	padding-left: 50px;
+}
+.footer-col-3{
+    flex-basis: 12%;
+    text-align: right;
+    margin-right: 0;
+}
+.to-top{
+    background: #fff;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #1f1f1f;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+    z-index: 1000;
+}
+.to-top.active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
